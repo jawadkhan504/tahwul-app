@@ -1,0 +1,147 @@
+.header {
+  height: 70px;
+  z-index: 100;
+  display: flex;
+  position: sticky;
+  background: white;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+
+  span {
+    width: 24px;
+    height: 3px;
+    background: var(--primary-blue);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  margin: 0 var(--spacing-xl);
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+    margin: 0 var(--spacing-md);
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.searchInput {
+  width: 318px;
+  height: 34px;
+  display: flex;
+  margin-left: 20px;
+  padding-left: 40px;
+  border-width: 1px;
+  border-radius: 8px;
+  background: #f5f8fa;
+  border: 1px solid #e0e8ed;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 9px;
+  left: 40px;
+}
+
+.actions {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionButton {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--gray-100);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+
+  @media (max-width: 480px) {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+.notificationBadge {
+  width: 7;
+  height: 7;
+  top: -6px;
+  left: -6px;
+  position: relative;
+  border-radius: 50%;
+  background: #db1f26;
+}
+
+.user {
+  width: 128px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  background: var(--Lead-10, #f9fafa);
+
+  @media (max-width: 480px) {
+    padding: var(--spacing-sm);
+  }
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userName {
+  font-weight: 500;
+  color: var(--text-primary);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.userCaret {
+  font-size: 0.7rem;
+  color: black;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}

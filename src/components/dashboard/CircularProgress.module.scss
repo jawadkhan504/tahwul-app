@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.svg {
+  transform: rotate(-90deg);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.circleBackground {
+  stroke: var(--gray-200);
+}
+
+.circleProgress {
+  transition:
+    stroke-dashoffset 1s ease-out,
+    stroke 0.3s ease;
+  animation: drawCircle 1.5s ease-out;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  fill: var(--text-primary);
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+@keyframes drawCircle {
+  from {
+    stroke-dashoffset: 1000;
+  }
+}

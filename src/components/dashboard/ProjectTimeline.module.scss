@@ -1,0 +1,146 @@
+$primary-green: #28a745;
+$bg-light: #f8fafc;
+$text-muted: #64748b;
+$border-color: #e0e8ed;
+$pending-red: #dc3545;
+
+.container {
+  background-color: $bg-light;
+  font-family: sans-serif;
+}
+
+.timelineCard {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid $border-color;
+  margin-bottom: 15px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    h2 {
+      font-size: 1.1rem;
+      color: #1e293b;
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e8ed;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #111827;
+    cursor: pointer;
+  }
+}
+
+.timelineWrapper {
+  position: relative;
+  padding-bottom: 1rem;
+
+  .progressLine {
+    height: 14px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    background: #f1f5f9;
+    border-radius: 8px;
+
+    .filledLine {
+      height: 100%;
+      background: $primary-green;
+      border-radius: 8px;
+    }
+  }
+
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+      text-align: center;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+        border: 3px solid;
+        margin-bottom: 12px;
+
+        &.complete {
+          border-color: white;
+          background: white;
+          outline: 1px solid $primary-green;
+        }
+        &.pending {
+          border-color: $pending-red;
+          background: $pending-red;
+        }
+      }
+
+      .date {
+        font-size: 0.8rem;
+        color: $text-muted;
+      }
+      .label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-top: 4px;
+        color: #334155;
+      }
+    }
+  }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+
+  .statCard {
+    height: 80px;
+    background: white;
+    padding: 0px 15px;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background: #ffffff;
+
+    .statInfo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .val {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1e293b;
+      }
+      .lab {
+        font-size: 0.8rem;
+        color: $text-muted;
+        margin-top: 4px;
+      }
+    }
+    .icon {
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+  }
+}
