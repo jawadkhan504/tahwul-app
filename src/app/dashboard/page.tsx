@@ -1,8 +1,8 @@
 "use client";
 
-import BarChart from "@/components/dashboard/BarChart";
-import CircularProgress from "@/components/dashboard/CircularProgress";
-import { dashboardData } from "@/components/data/dashboardData";
+// import BarChart from "@/components/dashboard/BarChart";
+// import CircularProgress from "@/components/dashboard/CircularProgress";
+// import { dashboardData } from "@/components/data/dashboardData";
 import styles from "./page.module.scss";
 import { ProjectTimeline } from "@/components/dashboard/ProjectTimeline";
 import ProgressStatus from "@/components/dashboard/ProgressStatus";
